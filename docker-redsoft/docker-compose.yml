@@ -1,0 +1,48 @@
+version: '3.0'
+
+services:
+  redsoft-php-fpm:
+    build:
+      context: ./php-fpm
+    volumes:
+      - ../src:/var/www
+      - ./freetds.conf:/etc/freetds/freetds.conf
+    links:
+      - database-redsoft
+
+  redsoft-php-cli:
+    build:
+      context: ./php-cli
+    volumes:
+      - ../src:/var/www
+      - ./freetds.conf:/etc/freetds/freetds.conf
+    stdin_open: true
+    tty: true
+    links:
+      - database-redsoft
+
+  redsoft-nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - ../src:/var/www
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites/:/etc/nginx/sites-available
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    depends_on:
+      - redsoft-php-fpm
+
+  database-redsoft:
+    build:
+      context: ./database
+    environment:
+      - MYSQL_DATABASE=db_redsoft
+      - MYSQL_USER=db_redsoft
+      - MYSQL_PASSWORD=db_password
+      - MYSQL_ROOT_PASSWORD=docker
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - "3306:3306"
