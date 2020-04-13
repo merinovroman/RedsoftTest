@@ -35,10 +35,6 @@ class GetProduct
         $this->_s404 = false;
 
         $this->connect();
-        if ($this->dbConn) {
-//            $this->Worker();
-//            $this->disconnect();
-        }
     }
 
     private function connect()
