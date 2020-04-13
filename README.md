@@ -4,20 +4,20 @@
 
 
 
-###Выдача товара по ID
+### Выдача товара по ID
 * <http://localhost/geiId.php?id=2>
 
-###Выдача товаров по вхождению подстроки в названии
+### Выдача товаров по вхождению подстроки в названии
 * <http://localhost/getElementName.php?search=газовый>
 
-###Выдача товаров по производителю/производителям
+### Выдача товаров по производителю/производителям
 * <http://localhost/getManufactureElement.php?search=СААЗ>
 * <http://localhost/getManufactureElement.php?search[]=СААЗ&search[]=SACHS>
 
-###Выдача товаров по разделу (только раздел)
+### Выдача товаров по разделу (только раздел)
 * <http://localhost/getElementBySection.php?sectionId=6>
 
-###Выдача товаров по разделу и вложенным разделам
+### Выдача товаров по разделу и вложенным разделам
 * <http://localhost/getElementSectionTree.php?sectionId=3>
 
 ## Requirements
