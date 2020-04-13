@@ -1,0 +1,9 @@
+{
+  "name": "RomanAM/test-redsoft",
+  "description": "Тестовое задание RedSoft",
+  "autoload": {
+    "psr-4": {
+      "RomanAM\\": "src/"
+    }
+  }
+}
