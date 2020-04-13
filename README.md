@@ -1,23 +1,23 @@
 # RedsoftTest
 
-* Проект реализован с использованием Docker
+* РџСЂРѕРµРєС‚ СЂРµР°Р»РёР·РѕРІР°РЅ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј Docker
 
 
 
-###Выдача товара по ID
+###Р’С‹РґР°С‡Р° С‚РѕРІР°СЂР° РїРѕ ID
 * <http://localhost/geiId.php?id=2>
 
-###Выдача товаров по вхождению подстроки в названии
-* <http://localhost/getElementName.php?search=газовый>
+###Р’С‹РґР°С‡Р° С‚РѕРІР°СЂРѕРІ РїРѕ РІС…РѕР¶РґРµРЅРёСЋ РїРѕРґСЃС‚СЂРѕРєРё РІ РЅР°Р·РІР°РЅРёРё
+* <http://localhost/getElementName.php?search=РіР°Р·РѕРІС‹Р№>
 
-###Выдача товаров по производителю/производителям
-* <http://localhost/getManufactureElement.php?search=СААЗ>
-* <http://localhost/getManufactureElement.php?search[]=СААЗ&search[]=SACHS>
+###Р’С‹РґР°С‡Р° С‚РѕРІР°СЂРѕРІ РїРѕ РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЋ/РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏРј
+* <http://localhost/getManufactureElement.php?search=РЎРђРђР—>
+* <http://localhost/getManufactureElement.php?search[]=РЎРђРђР—&search[]=SACHS>
 
-###Выдача товаров по разделу (только раздел)
+###Р’С‹РґР°С‡Р° С‚РѕРІР°СЂРѕРІ РїРѕ СЂР°Р·РґРµР»Сѓ (С‚РѕР»СЊРєРѕ СЂР°Р·РґРµР»)
 * <http://localhost/getElementBySection.php?sectionId=6>
 
-###Выдача товаров по разделу и вложенным разделам
+###Р’С‹РґР°С‡Р° С‚РѕРІР°СЂРѕРІ РїРѕ СЂР°Р·РґРµР»Сѓ Рё РІР»РѕР¶РµРЅРЅС‹Рј СЂР°Р·РґРµР»Р°Рј
 * <http://localhost/getElementSectionTree.php?sectionId=3>
 
 ## Requirements
@@ -31,7 +31,7 @@ Clone repo
 $ git clone https://github.com/merinovroman/RedsoftTest.git
 ```
 
-Запуск Docker
+Р—Р°РїСѓСЃРє Docker
 ```
 $ cd ./docker-redsoft
 $ docker-compose up
